@@ -185,6 +185,7 @@ footer{
 
 }
 
+
 /* MOBILE VERSION ONLY */
 
 @media (max-width: 576px) {
@@ -238,8 +239,7 @@ footer{
         text-align: center;      
         font-size: var(--text-medium);
     }
-    
-    
+        
 }
 
 
