@@ -23,5 +23,5 @@ export default defineConfig({
             
         })
     ],
-    base:"/josemiguel28.github.io"
+    base:"/josemiguel28.github.io/"
 })
