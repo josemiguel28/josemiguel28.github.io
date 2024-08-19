@@ -6,13 +6,13 @@
 @secondary-color: #7c65a9;
 @dark-brown: #341413;
 @gray-1: #798092;
-@gray-2: #e6e6ed;
+@gray-2: #D9D9D9;
 @white: #fff;
 @black: #000;
 
 /* Font Size Desktop */
 @header-1: 64px;
-@header-2: 48px;
+@header-2: 56px;
 @header-3: 42px;
 @header-4: 32px;
 
@@ -46,7 +46,7 @@ html, body {
 /* BUTTON PRIMARY */
 
 .btn {
-  padding: 15px 25px;
+  padding: 13px 23px;
   border-radius: 6px;
   font-size: @text-medium;
   font-weight: @font-weight-medium;
@@ -55,6 +55,15 @@ html, body {
 
 .btn-primary {
   background-color: @primary;
+
+}
+
+.custom-border {
+  padding: 8px 12px;
+  font-size: @text-medium;
+  background-color: @white;
+  border: 2px solid @black; /* Adjust the color and width as needed */
+  border-radius: 12px;
 }
 
 .btn-primary:focus {
@@ -88,7 +97,7 @@ html, body {
 
 .navbar-brand {
   img {
-    padding-right: 16px;
+    padding-right: 25px;
   }
 }
 
@@ -102,6 +111,18 @@ html, body {
 
 .navbar {
   padding: 48px 0;
+
+}
+
+.navbar-collapse {
+  .social-icons {
+    display: none;
+  }
+
+  .btn-close {
+    display: none;
+  }
+
 }
 
 a.nav-link {
@@ -109,6 +130,12 @@ a.nav-link {
   font-size: @text-regular;
   font-weight: @font-weight-regular;
   color: @dark-brown !important;
+
+}
+
+.active {
+  color: @secondary-color !important;
+  border-bottom: 3px solid @secondary-color;
 }
 
 /* HERO */
@@ -132,7 +159,7 @@ section.hero {
 
 .text-hero-bold {
   color: @black;
-  font-size: @header-1;
+  font-size: @header-2;
   font-weight: @font-weight-bold;
   line-height: 74px;
 }
@@ -175,26 +202,25 @@ section.hero {
 #projects {
 
   .row {
-
     .card {
       height: 33rem; /* Ajusta la altura fija según tus necesidades */
       overflow: hidden; /* Asegura que el contenido adicional no desborde la carta */
       box-shadow: 0 4px 19px rgba(0, 0, 0, 0.08);
       border-radius: 14px;
-      border: none;
+      @media (max-width: @size[@phone]) {
+        height: auto;
+      }
     }
 
     .card-img-top {
       max-height: 235px; /* Ajusta la altura máxima según tus necesidades */
-      object-fit: contain; /* Mantiene la proporción de la imagen */
     }
 
     .proyect-picture {
-      margin: 20px;
+      height: auto;
     }
 
     .card-body {
-
       .badge {
         background-color: @secondary-color;
         color: @white;
@@ -284,6 +310,7 @@ section.hero {
       h4 {
         font-size: @text-large;
         font-weight: @font-weight-medium;
+        text-align: left;
       }
 
       a {
@@ -306,9 +333,13 @@ section.hero {
 /*footer*/
 
 .social_icon {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
+  width: 36px;
+  height: 36px;
+  padding: 0 5px;
+}
+
+.left p {
+  margin-top: 12px;
 }
 
 footer {
@@ -326,7 +357,6 @@ footer {
         color: grey;
         text-align: center;
         text-transform: uppercase;
-
       }
     }
   }
@@ -349,18 +379,75 @@ footer {
 @media (max-width: @size[@phone]) {
 
   /* NAVBAR */
-  .navbar {
-    padding: 28px 0;
-  }
+  /* Custom CSS for full-screen navbar on mobile */
+  .navbar-collapse {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1050; /* Ensure it is above other elements */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px); /* Para compatibilidad con Safari */
 
-  a.nav-link {
-    margin-right: 7px;
+    .btn-close {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      padding: 1rem;
+      font-size: 1.5rem;
+      transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
+    }
+
+    .collapse.show {
+      height: auto;
+      opacity: 1;
+    }
+
+    .collapse {
+      height: 0;
+      opacity: 0;
+      transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
+
+    }
+
+    .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 80%;
+
+      .nav-link {
+        margin: 0.5rem 0;
+        font-size: @text-large;
+      }
+
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-right: 5px;
+      }
+
+      .btn {
+        margin-bottom: 15rem;
+      }
+    }
   }
 
   /* HERO */
   section.hero {
     margin: 2rem 0;
     text-align: center;
+
+    .social-icons {
+      display: none;
+    }
   }
 
   .btn {
@@ -411,7 +498,6 @@ footer {
 
 
 /* TABLET SMALL VERSION ONLY */
-
 @media (max-width: @size[@tablet-s]) {
 
   /* NAVBAR */
@@ -451,7 +537,6 @@ footer {
 
 
 /* TABLET MEDIUM & LARGE VERSION ONLY */
-
 @media (max-width: @size[@tablet-l]) {
   /* NAVBAR */
   .navbar {
@@ -484,4 +569,180 @@ footer {
     text-align: center;
     font-size: @text-medium;
   }
+
 }
+
+/*custom techsection*/
+
+#skills {
+
+  .mb-4 {
+    .technologies {
+      .row {
+        .tech-container {
+          background-color: #F5F5F5;
+          border-radius: 4px;
+          height: 5rem;
+          width: 12rem;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Small shadow */
+
+          @media (max-width: @size[@phone]) {
+            width: 8rem;
+          }
+
+          @media (max-width: @size[@tablet-s]) {
+            width: 10rem;
+          }
+
+          @media (max-width: @size[@tablet-l]) {
+            width: 10rem;
+          }
+
+          @media (max-width: @size[@desktop]) {
+            .row {
+              .col-6 {
+                width: 10rem;
+              }
+            }
+          }
+
+          h3 {
+            font-size: @text-medium;
+            font-weight: @font-weight-medium;
+            color: @black;
+            text-align: center;
+            margin-top: 10px;
+          }
+
+          .circle {
+            width: 10px;
+            height: 10px;
+            background-color: @gray-2; /* Change color as needed */
+            border-radius: 50%;
+          }
+
+          .circle-active {
+            background-color: @secondary-color; /* Change color as needed */
+          }
+
+          .circle-half-filled {
+            background: linear-gradient(to right, @secondary-color 50%, @gray-2 50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+/*custom banner*/
+section {
+  margin-top: 10rem;
+  margin-bottom: -5rem;
+
+  .banner {
+    background-color: rgb(150, 212, 202, 0.5);
+    border-radius: 12px;
+
+    .text-banner {
+      font-size: @text-large;
+      text-align: center;
+    }
+
+    .custom-border {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 35px;
+    }
+  }
+
+  @media (min-width: @size[@desktop]) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    .banner {
+      grid-column: span 2;
+    }
+    
+    .custom-border {
+      display: none;
+      width: 60%;
+      background-color: #7C65A9;
+    }
+
+    .btn {
+      grid-column: span 2;
+      margin-top: 20px; /* Adjust margin as needed */
+    }
+  }
+}
+
+/*commign soon*/
+.coming-soon-container {
+  text-align: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+footer {
+  /* From Uiverse.io by Maximinodotpy */
+  /* From Uiverse.io by Maximinodotpy */
+
+  .inputGroup {
+    margin: 1em 0 1em 0;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .inputGroup input, textarea {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  .inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+  }
+
+  .inputGroup :is(input:focus, input:valid,textarea:focus,textarea:valid) ~ label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #FFFFFF;
+  }
+
+  .inputGroup :is(input:focus, input:valid, textarea:focus, textarea:valid) {
+    border-color: rgb(150, 150, 200);
+  }
+}
+
