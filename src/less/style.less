@@ -381,17 +381,21 @@ footer {
   /* NAVBAR */
   /* Custom CSS for full-screen navbar on mobile */
   .navbar-collapse {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1050; /* Ensure it is above other elements */
-    overflow-y: auto; /* Allow scrolling if content overflows */
-    transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px); /* Para compatibilidad con Safari */
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1050; /* Ensure it is above other elements */
+      overflow-y: auto; /* Allow scrolling if content overflows */
+      transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px); /* Para compatibilidad con Safari */
+      -moz-backdrop-filter: blur(25px); /* Para compatibilidad con Firefox */
+      -o-backdrop-filter: blur(25px); /* Para compatibilidad con Opera */
+      -ms-backdrop-filter: blur(25px); /* Para compatibilidad con IE */
+  
 
     .btn-close {
       display: block;
@@ -690,7 +694,6 @@ section {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 h1 {
   font-size: 2.5rem;
@@ -700,6 +703,8 @@ h1 {
 p {
   font-size: 1.2rem;
   color: #666;
+}
+
 }
 
 footer {
