@@ -572,15 +572,8 @@ footer {
     overflow-y: auto;
     /* Allow scrolling if content overflows */
     transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    /* Para compatibilidad con Safari */
-    -moz-backdrop-filter: blur(25px);
-    /* Para compatibilidad con Firefox */
-    -o-backdrop-filter: blur(25px);
-    /* Para compatibilidad con Opera */
-    -ms-backdrop-filter: blur(25px);
-    /* Para compatibilidad con IE */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     #closeNavbar {
       display: block;
@@ -618,7 +611,7 @@ footer {
       }
     }
 
-    .btn{
+    .btn {
       display: block;
       width: 80%;
       margin: 0 auto;
@@ -630,9 +623,9 @@ footer {
   section.hero {
     margin: 1rem 0;
 
-    .container{
-      
-      .btn-primary{
+    .container {
+
+      .btn-primary {
         width: 100%;
         padding: 1rem 5rem;
         margin-bottom: 10px;
