@@ -260,6 +260,9 @@ section.hero {
 }
 
 .modal {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* Para compatibilidad con Safari */
 
   .modal-body {
 
@@ -382,6 +385,34 @@ footer {
 @media (max-width: @size[@phone]) {
 
   /* NAVBAR */
+  /* Pseudo-elemento para el desenfoque */
+  .navbar {
+    .container {
+
+      .container-collapse {
+        position: relative;
+        overflow: hidden;
+        background: url('/build/') no-repeat center center;
+        /* Asegúrate de tener un fondo */
+      }
+
+      .container-collapse::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: inherit;
+        /* Hereda el fondo del contenedor */
+        filter: blur(100px);
+        z-index: -1;
+
+        /* Coloca el pseudo-elemento detrás del contenido */
+      }
+    }
+  }
+
   /* Custom CSS for full-screen navbar on mobile */
   .navbar-collapse {
     display: block;
@@ -395,9 +426,13 @@ footer {
     overflow-y: auto;
     /* Allow scrolling if content overflows */
     transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    /* Para compatibilidad con Safari */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
 
 
     #closeNavbar {
@@ -448,6 +483,8 @@ footer {
       }
     }
   }
+
+
 
   /* HERO */
   section.hero {
@@ -559,12 +596,10 @@ footer {
     width: 100%;
     height: 100%;
     z-index: 1050;
-    /* Ensure it is above other elements */
+
     overflow-y: auto;
-    /* Allow scrolling if content overflows */
+
     transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 
     #closeNavbar {
       display: block;
@@ -642,7 +677,6 @@ footer {
     font-size: @text-medium;
   }
 }
-
 
 /*custom techsection*/
 
