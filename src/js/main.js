@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
+    
     iniciarApp();
 });
 
 function iniciarApp() {
     closeNavBar();
     navBarTransition();
-    enviarFormulario()
+    navBarTransitionWhenClosign();
+    enviarFormulario();
 }
 
 function closeNavBar() {
@@ -24,6 +26,8 @@ function navBarTransition() {
             navbarCollapse.classList.remove('show');
         } else {
             navbarCollapse.classList.add('show');
+            navbarCollapse.classList.add('closed')
+
         }
     });
 }
