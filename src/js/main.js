@@ -15,7 +15,21 @@ function closeNavBar() {
         let navbarCollapse = document.getElementById('navbarNavAltMarkup');
         navbarCollapse.classList.remove('show');
     });
+
+    // Seleccionar todos los enlaces dentro de la barra de navegación
+    let navLinks = document.querySelectorAll('#navbarNavAltMarkup a');
+
+    // Agregar evento de clic a cada enlace
+    navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+            let navbarCollapse = document.getElementById('navbarNavAltMarkup');
+            navbarCollapse.classList.remove('show');
+        });
+    });
 }
+
+// Llamar a la función para asegurarse de que los eventos se agreguen
+closeNavBar();
 
 function navBarTransition() {
     var navbarToggler = document.querySelector('.navbar-toggler');
