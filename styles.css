@@ -613,14 +613,106 @@ em {
 .project-list {
   display: flex;
   flex-direction: column;
-  gap: clamp(4rem, 8vw, 7rem);
+  gap: clamp(5rem, 10vw, 8.5rem);
 }
 
 .project-item {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.05fr 0.95fr;
   gap: clamp(2.5rem, 5vw, 5rem);
   align-items: center;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+/* Keyframes vinculados 1:1 al scroll por el viewport */
+@keyframes project-focus-flow {
+  0% {
+    opacity: 0.38;
+    scale: 0.92;
+    translate: 0 24px;
+  }
+
+  35%,
+  65% {
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+
+  100% {
+    opacity: 0.38;
+    scale: 0.93;
+    translate: 0 -24px;
+  }
+}
+
+@keyframes project-image-focus {
+  0% {
+    filter: brightness(0.92) contrast(0.95);
+  }
+
+  35%,
+  65% {
+    filter: brightness(1) contrast(1);
+  }
+
+  100% {
+    filter: brightness(0.92) contrast(0.95);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .project-item {
+    animation: project-focus-flow linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 100%;
+  }
+
+  .project-item .project-image img {
+    animation: project-image-focus linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 100%;
+  }
+}
+
+/* Mobile & tablet adjustments for project focus animation */
+@media (max-width: 768px) {
+  .project-list {
+    gap: clamp(3.5rem, 8vw, 5.5rem);
+  }
+
+  @keyframes project-focus-flow {
+    0% {
+      opacity: 0.5;
+      scale: 0.96;
+      translate: 0 14px;
+    }
+
+    35%,
+    65% {
+      opacity: 1;
+      scale: 1;
+      translate: 0 0;
+    }
+
+    100% {
+      opacity: 0.5;
+      scale: 0.97;
+      translate: 0 -14px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-item,
+  .project-item .project-image img {
+    animation: none !important;
+    opacity: 1 !important;
+    scale: 1 !important;
+    translate: none !important;
+    filter: none !important;
+  }
 }
 
 /* Even projects flip image to the right */
