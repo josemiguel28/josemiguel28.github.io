@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="José Miguel — Full-Stack Developer & UI/UX. Construyo productos digitales que las personas entienden, disfrutan y regresan a usar. Disponible globalmente.">
-  <meta name="theme-color" content="#13131F">
-  <meta property="og:title" content="José Miguel — Full-Stack Developer & UI/UX">
-  <meta property="og:description" content="Construyo experiencias digitales claras, útiles y memorables.">
+    content="José Miguel — Full-Stack Developer. Desarrollo aplicaciones web completas, del backend a la interfaz. Disponible para trabajo remoto o presencial.">
+  <meta name="theme-color" content="#111111">
+  <meta property="og:title" content="José Miguel — Full-Stack Developer">
+  <meta property="og:description" content="Desarrollo aplicaciones web completas, del backend a la interfaz.">
   <meta property="og:type" content="website">
-  <title>José Miguel — Full-Stack Developer & UI/UX</title>
+  <title>José Miguel — Full-Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -21,9 +21,6 @@
 
 <body>
 
-  <!-- Custom cursor (hidden by JS on touch devices) -->
-  <div class="cursor" id="cursor" aria-hidden="true"></div>
-  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
 
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
@@ -57,7 +54,6 @@
          ==================================================== -->
     <section id="inicio" class="hero" aria-labelledby="hero-heading">
       <div class="container">
-
         <div class="hero-inner">
           <div class="hero-badge" role="status">
             <span class="badge-dot" aria-hidden="true"></span>
@@ -66,13 +62,13 @@
 
           <h1 id="hero-heading" class="hero-title">
             Construyo<br>
-            <em>experiencias</em><br>
-            digitales.
+            <em>aplicaciones</em><br>
+            web reales.
           </h1>
 
-          <p class="hero-role mono">Full-Stack Developer &amp; UI/UX</p>
-          <p class="hero-desc">Combino diseño y código para crear productos que las personas entienden, disfrutan y
-            regresan a usar.</p>
+          <p class="hero-role mono">Full-Stack Developer — Frontend · Backend · Producto</p>
+          <p class="hero-desc">Desarrollo aplicaciones web completas, del backend a la interfaz. Me importa tanto que el
+            código funcione como que el producto sea claro y fácil de usar.</p>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#proyectos">Ver proyectos <span aria-hidden="true">↓</span></a>
@@ -86,8 +82,8 @@
             </div>
             <div class="stat-div" aria-hidden="true"></div>
             <div class="stat">
-              <span class="stat-num">15+</span>
-              <span class="stat-label">Proyectos</span>
+              <span class="stat-num">3</span>
+              <span class="stat-label">Apps en prod.</span>
             </div>
             <div class="stat-div" aria-hidden="true"></div>
             <div class="stat">
@@ -121,8 +117,8 @@
         <header class="section-header reveal">
           <p class="eyebrow">01 — Trabajo seleccionado</p>
           <h2 id="projects-heading">
-            Proyectos que<br>
-            <em>resuelven problemas</em> reales.
+            Aplicaciones que
+            <em>resuelven</em> problemas reales.
           </h2>
         </header>
 
@@ -137,21 +133,24 @@
             <div class="project-content">
               <span class="project-num mono">01 / 03</span>
               <h3>Portal de Becarios ASONOG</h3>
-              <p>Plataforma para gestionar becas, pasantías, voluntariados y donaciones. Incluye cuentas de usuario y
-                herramientas para administrar la información y procesos relacionados con los becarios.</p>
+              <p>ASONOG gestiona becas, pasantías y voluntariados para jóvenes en Honduras. El proceso era manual y
+                disperso. Desarrollé una plataforma completa que centraliza toda esa gestión: postulaciones, seguimiento
+                de beneficiarios, donaciones y panel administrativo.</p>
               <ul class="project-tags" aria-label="Tecnologías utilizadas">
                 <li>Laravel</li>
                 <li>PHP</li>
                 <li>MySQL</li>
-                <li>Tailwind</li>
+                <li>Tailwind CSS</li>
                 <li>PayPal API</li>
               </ul>
 
               <div class="project-links-container">
-                <a class="project-link" href="#contacto" aria-label="Ver caso completo del proyecto">
+                <button class="project-link" type="button" data-modal="modal-becarios"
+                  aria-label="Ver caso completo del proyecto Portal de Becarios">
                   Ver caso completo <span aria-hidden="true">↗</span>
-                </a>
-                <a class="project-link-url" href="https://becas.asonog.hn" target="_blank" aria-label="Ir al sitio">
+                </button>
+                <a class="project-link-url" href="https://becas.asonog.hn" target="_blank" rel="noopener"
+                  aria-label="Ir al sitio de Portal de Becarios">
                   Ir al sitio
                 </a>
               </div>
@@ -166,22 +165,24 @@
             </div>
             <div class="project-content">
               <span class="project-num mono">02 / 03</span>
-              <h3>Cotizador de pérgolas</h3>
-              <p>Aplicación web para calcular y cotizar proyectos de pérgolas de forma más rápida y precisa. La lógica
-                de cálculo fue trasladada desde fórmulas de Excel a una aplicación web.</p>
+              <h3>Cotizador de Pérgolas</h3>
+              <p>El proceso de cotización dependía de fórmulas en Excel difíciles de mantener y compartir. Trasladé esa
+                lógica a una aplicación web con cálculos automáticos en tiempo real, accesible desde cualquier
+                dispositivo.</p>
               <ul class="project-tags" aria-label="Tecnologías utilizadas">
                 <li>Laravel</li>
                 <li>PHP</li>
                 <li>MySQL</li>
-                <li>Tailwind</li>
+                <li>Tailwind CSS</li>
                 <li>Livewire</li>
               </ul>
               <div class="project-links-container">
-                <a class="project-link" href="#contacto" aria-label="Ver caso completo del proyecto">
+                <button class="project-link" type="button" data-modal="modal-cotizador"
+                  aria-label="Ver caso completo del proyecto Cotizador de Pérgolas">
                   Ver caso completo <span aria-hidden="true">↗</span>
-                </a>
-                <a class="project-link-url" href="https://cotizador.estudio3a.ec" target="_blank"
-                  aria-label="Ir al sitio">
+                </button>
+                <a class="project-link-url" href="https://cotizador.estudio3a.ec" target="_blank" rel="noopener"
+                  aria-label="Ir al sitio del Cotizador">
                   Ir al sitio
                 </a>
               </div>
@@ -191,27 +192,29 @@
           <!-- Project 3 -->
           <article class="project-item">
             <div class="project-image">
-              <img src="/build/img/mockup-projects/consultas-umasgl.webp" alt="Consultas UMASGL" loading="lazy"
-                width="800" height="600">
+              <img src="/build/img/mockup-projects/consultas-umasgl.webp" alt="Portal de Agua y Saneamiento UMASGL"
+                loading="lazy" width="800" height="600">
             </div>
             <div class="project-content">
               <span class="project-num mono">03 / 03</span>
-              <h3>Portal de agua y saneamiento</h3>
-              <p>Plataforma web para centralizar información y recursos relacionados con agua potable y saneamiento.
-                Desarrollada desde cero para facilitar la consulta y gestión del contenido.</p>
+              <h3>Portal de Agua y Saneamiento</h3>
+              <p>La información sobre los servicios de agua y saneamiento estaba dispersa, sin un punto de acceso
+                centralizado. Construí desde cero una plataforma web para centralizar y organizar ese contenido de forma
+                accesible.</p>
               <ul class="project-tags" aria-label="Tecnologías utilizadas">
                 <li>Laravel</li>
                 <li>PHP</li>
                 <li>MySQL</li>
-                <li>Tailwind</li>
+                <li>Tailwind CSS</li>
                 <li>Livewire</li>
               </ul>
               <div class="project-links-container">
-                <a class="project-link" href="#contacto" aria-label="Ver caso completo del proyecto">
+                <button class="project-link" type="button" data-modal="modal-umasgl"
+                  aria-label="Ver caso completo del proyecto Portal UMASGL">
                   Ver caso completo <span aria-hidden="true">↗</span>
-                </a>
-                <a class="project-link-url" href="https://consultas.umasgl.com" target="_blank"
-                  aria-label="Ir al sitio">
+                </button>
+                <a class="project-link-url" href="https://consultas.umasgl.com" target="_blank" rel="noopener"
+                  aria-label="Ir al sitio de UMASGL">
                   Ir al sitio
                 </a>
               </div>
@@ -232,7 +235,7 @@
           <p class="eyebrow">02 — Cómo trabajo</p>
           <h2 id="process-heading">
             Del problema<br>
-            a una experiencia<br>
+            a una aplicación<br>
             <em>que funciona.</em>
           </h2>
         </header>
@@ -242,32 +245,32 @@
             <span class="step-num" aria-hidden="true">01</span>
             <div class="step-content">
               <h3>Entender</h3>
-              <p>Objetivos de negocio, usuarios, contexto competitivo y definición de éxito. Sin claridad aquí, todo lo
-                demás está en riesgo.</p>
+              <p>Antes de escribir código, entiendo el problema que hay que resolver, quién lo va a usar y qué define el
+                éxito del proyecto.</p>
             </div>
           </li>
           <li class="process-step reveal">
             <span class="step-num" aria-hidden="true">02</span>
             <div class="step-content">
-              <h3>Diseñar</h3>
-              <p>Flujos, wireframes y prototipos para hacer tangible la solución antes de escribir una línea de código.
-                Validar barato, iterar rápido.</p>
+              <h3>Planificar</h3>
+              <p>Defino la arquitectura, los modelos de datos y las funcionalidades prioritarias antes de construir. El
+                diseño y la estructura técnica van de la mano.</p>
             </div>
           </li>
           <li class="process-step reveal">
             <span class="step-num" aria-hidden="true">03</span>
             <div class="step-content">
-              <h3>Desarrollar</h3>
-              <p>Interfaces responsive, accesibles y rápidas. Código que refleja el mismo cuidado del diseño, atendido
-                hasta el último detalle.</p>
+              <h3>Construir</h3>
+              <p>Desarrollo frontend y backend de forma integrada: rutas, lógica de negocio, base de datos, interfaces y
+                APIs. Código limpio y experiencia de usuario van juntos.</p>
             </div>
           </li>
           <li class="process-step reveal">
             <span class="step-num" aria-hidden="true">04</span>
             <div class="step-content">
-              <h3>Entregar</h3>
-              <p>Documentación clara, handoff ordenado y disponibilidad para iterar. El lanzamiento es el comienzo, no
-                el final.</p>
+              <h3>Refinar</h3>
+              <p>Pruebo, corrijo y ajusto hasta que la aplicación funciona como debe. Me aseguro de que sea fácil de
+                usar y de mantener.</p>
             </div>
           </li>
         </ol>
@@ -284,43 +287,59 @@
         <header class="section-header reveal">
           <p class="eyebrow">03 — Capacidades</p>
           <h2 id="skills-heading">
-            Herramientas para<br>
-            crear <em>de punta a punta.</em>
+            Stack completo,<br>
+            <em>de punta a punta.</em>
           </h2>
         </header>
 
         <div class="skills-grid">
           <div class="skill-group reveal">
-            <p class="skill-category">Diseño & UX</p>
-            <ul class="skill-list">
-              <li>UI Design</li>
-              <li>UX Research</li>
-              <li>Wireframing</li>
-              <li>Prototyping</li>
-              <li>Design Systems</li>
-              <li>Figma</li>
-            </ul>
-          </div>
-          <div class="skill-group reveal">
             <p class="skill-category">Frontend</p>
             <ul class="skill-list">
               <li>HTML &amp; CSS</li>
-              <li>JavaScript (ES2024+)</li>
-              <li>Livewire</li>
-              <li>Vite</li>
+              <li>JavaScript</li>
               <li>Tailwind CSS</li>
-              <li>Accesibilidad WCAG</li>
+              <li>Livewire</li>
+              <li>Responsive design</li>
             </ul>
           </div>
           <div class="skill-group reveal">
-            <p class="skill-category">Backend & Tools</p>
+            <p class="skill-category">Backend</p>
             <ul class="skill-list">
-              <li>Laravel</li>
               <li>PHP</li>
+              <li>Laravel</li>
+              <li>Autenticación</li>
+              <li>APIs REST</li>
+              <li>Lógica de negocio</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <p class="skill-category">Base de datos</p>
+            <ul class="skill-list">
+              <li>MySQL</li>
+              <li>Diseño de esquemas</li>
+              <li>Consultas SQL</li>
+              <li>Migraciones</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <p class="skill-category">Herramientas</p>
+            <ul class="skill-list">
               <li>Git &amp; GitHub</li>
-              <li>REST APIs</li>
-              <li>SQL</li>
-              <li>Trabajo remoto</li>
+              <li>Vite</li>
+              <li>Deployment</li>
+              <li>Hosting</li>
+              <li>Cloudflare</li>
+            </ul>
+          </div>
+          <div class="skill-group skill-group--secondary reveal">
+            <p class="skill-category">UI &amp; Producto</p>
+            <ul class="skill-list">
+              <li>Figma</li>
+              <li>UI design</li>
+              <li>Wireframing</li>
+              <li>Usabilidad</li>
+              <li>Design systems</li>
             </ul>
           </div>
         </div>
@@ -348,16 +367,17 @@
         <div class="about-copy">
           <p class="eyebrow reveal">04 — Sobre mí</p>
           <h2 id="about-heading" class="reveal">
-            Diseño interfaces que hacen que la tecnología
-            <em>se sienta humana.</em>
+            Desarrollo aplicaciones web
+            <em>completas.</em>
           </h2>
-          <p class="reveal">Me interesa crear productos digitales útiles, visualmente cuidados y fáciles de entender.
-            Combino pensamiento de diseño con desarrollo web para entregar experiencias completas — no solo pantallas
-            atractivas.</p>
-          <p class="reveal">Busco colaborar con equipos y empresas que valoren el impacto del buen diseño. Estoy abierto
-            a oportunidades <strong>remotas y presenciales</strong>, con alcance global.</p>
+          <p class="reveal">Trabajo en el frontend y el backend para construir aplicaciones funcionales de principio a
+            fin. He desarrollado plataformas reales para organizaciones en Honduras, desde el diseño de la base de datos
+            hasta la interfaz del usuario.</p>
+          <p class="reveal">Además de desarrollar, me importa que lo que construyo sea claro y fácil de usar. Eso me
+            permite entregar productos completos y bien pensados. Busco oportunidades <strong>remotas o
+              presenciales</strong> donde pueda contribuir de forma integral.</p>
           <a class="btn btn-primary reveal" href="#contacto" style="width: fit-content;">
-            Conversemos sobre tu equipo <span aria-hidden="true">→</span>
+            Hablemos sobre tu proyecto <span aria-hidden="true">→</span>
           </a>
         </div>
 
@@ -370,19 +390,21 @@
     <section id="contacto" class="contact-section" aria-labelledby="contact-heading">
       <div class="container">
         <div class="contact-inner reveal">
-          <p class="eyebrow">¿Tienes una oportunidad o proyecto?</p>
+          <p class="eyebrow">¿Buscas un desarrollador Full-Stack?</p>
           <h2 id="contact-heading">
-            Hagamos algo que<br>
-            la gente <em>quiera usar.</em>
+            Podemos hablar<br>
+            sobre <em>tu proyecto.</em>
           </h2>
-          <p>Estoy disponible para colaborar de forma remota o presencial. Cuéntame tu idea.</p>
+          <p>Si necesitas a alguien que trabaje el backend, el frontend y entienda el producto, escríbeme.</p>
           <a class="contact-email" href="mailto:josemiguel.repo@gmail.com" aria-label="Enviar correo a José Miguel">
             josemiguel.repo@gmail.com <span aria-hidden="true">↗</span>
           </a>
           <div class="contact-social-row">
-            <a class="contact-social" href="#" aria-label="Perfil de GitHub de José Miguel">GitHub</a>
+            <a class="contact-social" href="https://github.com/josemiguel28" target="_blank" rel="noopener"
+              aria-label="Perfil de GitHub de José Miguel">GitHub</a>
             <span class="contact-sep" aria-hidden="true">·</span>
-            <a class="contact-social" href="#" aria-label="Perfil de LinkedIn de José Miguel">LinkedIn</a>
+            <a class="contact-social" href="https://www.linkedin.com/in/jose-miguelp/" target="_blank" rel="noopener"
+              aria-label="Perfil de LinkedIn de José Miguel">LinkedIn</a>
           </div>
         </div>
       </div>
@@ -405,64 +427,372 @@
     </div>
   </footer>
 
-  <script>
-    (() => {
-      'use strict';
 
-      /* ── Mobile nav ─────────────────────────────────────── */
-      const menuBtn = document.getElementById('menu-btn');
-      const mainNav = document.getElementById('main-nav');
 
-      menuBtn.addEventListener('click', () => {
-        const open = mainNav.classList.toggle('is-open');
-        menuBtn.setAttribute('aria-expanded', open);
-      });
-      mainNav.querySelectorAll('a').forEach(link =>
-        link.addEventListener('click', () => {
-          mainNav.classList.remove('is-open');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        })
-      );
+  <!-- ====================================================
+       PROJECT MODALS — native <dialog>
+       ==================================================== -->
 
-      /* ── Header scroll state ────────────────────────────── */
-      const header = document.getElementById('site-header');
-      const heroEl = document.getElementById('inicio');
+  <!-- Modal 1: Portal de Becarios ASONOG -->
+  <dialog class="project-modal" id="modal-becarios" aria-labelledby="modal-becarios-title">
+    <div class="modal-inner">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow modal-eyebrow">01 / 03 — Caso de estudio</span>
+          <h2 id="modal-becarios-title" class="modal-title">Portal de Becarios ASONOG</h2>
+        </div>
+        <button class="modal-close" type="button" aria-label="Cerrar modal">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M15 5L5 15M5 5l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
 
-      const headerObserver = new IntersectionObserver(
-        ([entry]) => header.classList.toggle('scrolled', !entry.isIntersecting),
-        { rootMargin: '-80px 0px 0px 0px' }
-      );
-      if (heroEl) headerObserver.observe(heroEl);
+      <div class="modal-hero-img">
+        <img src="/build/img/mockup-projects/portal-becarios.webp" alt="Captura del Portal de Becarios ASONOG"
+          loading="lazy">
+      </div>
 
-      /* ── Custom cursor (pointer devices only) ───────────── */
-      const cursor = document.getElementById('cursor');
-      const cursorDot = document.getElementById('cursor-dot');
+      <div class="modal-meta">
+        <div class="meta-item">
+          <span class="meta-label">Rol</span>
+          <span class="meta-value">Full-Stack Developer</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Tipo</span>
+          <span class="meta-value">Aplicación web · ONG</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Estado</span>
+          <span class="meta-value">En producción</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Cliente</span>
+          <span class="meta-value">ASONOG</span>
+        </div>
+      </div>
 
-      if (window.matchMedia('(pointer: fine)').matches) {
-        let raf;
-        const move = (x, y) => {
-          document.documentElement.style.setProperty('--cx', x + 'px');
-          document.documentElement.style.setProperty('--cy', y + 'px');
-        };
+      <div class="modal-body-content">
+        <section class="modal-section">
+          <h3>El problema</h3>
+          <p>ASONOG gestiona programas de becas, pasantías y voluntariados para jóvenes en Honduras. La información de
+            los beneficiarios, las postulaciones y el registro de donaciones se gestionaban de forma manual y dispersa,
+            sin una plataforma centralizada que unificara esos procesos.</p>
+        </section>
 
-        document.addEventListener('mousemove', e => {
-          cancelAnimationFrame(raf);
-          raf = requestAnimationFrame(() => move(e.clientX, e.clientY));
-        });
+        <section class="modal-section">
+          <h3>La solución</h3>
+          <p>Desarrollé una plataforma web completa que centraliza la gestión de todos los programas de ASONOG. Los
+            postulantes pueden crear cuentas, completar sus postulaciones y consultar el estado. Los administradores
+            gestionan beneficiarios, documentos y donaciones desde un panel único.</p>
+        </section>
 
-        const hoverEls = document.querySelectorAll('a, button, [role="button"]');
-        hoverEls.forEach(el => {
-          el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
-          el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
-        });
-      } else {
-        cursor?.remove();
-        cursorDot?.remove();
-      }
+        <section class="modal-section">
+          <h3>Mi contribución</h3>
+          <ul class="modal-list">
+            <li>Diseño e implementación de la arquitectura de la aplicación con Laravel</li>
+            <li>Modelado y creación de la base de datos</li>
+            <li>Sistema de autenticación y roles de usuario (postulantes / administradores)</li>
+            <li>Integración con PayPal API para el procesamiento de donaciones</li>
+            <li>Panel administrativo para gestión de beneficiarios y documentos</li>
+            <li>Diseño de la interfaz con Tailwind CSS</li>
+          </ul>
+        </section>
 
-    })();
-  </script>
+        <section class="modal-section">
+          <h3>Funcionalidades principales</h3>
+          <ul class="modal-list">
+            <li>Registro y autenticación de usuarios</li>
+            <li>Perfiles de becarios con gestión de documentos</li>
+            <li>Postulaciones para becas y pasantías</li>
+            <li>Procesamiento de donaciones vía PayPal</li>
+            <li>Panel de administración completo</li>
+            <li>Control de acceso por roles</li>
+          </ul>
+        </section>
 
+        <section class="modal-section">
+          <h3>Implementación técnica</h3>
+          <ul class="modal-list">
+            <li><strong>Laravel</strong>: Framework principal del backend — rutas, controladores, modelos y
+              autenticación</li>
+            <li><strong>MySQL</strong>: Base de datos relacional para toda la información del sistema</li>
+            <li><strong>PayPal API</strong>: Integración con webhooks para verificar el estado de los pagos en tiempo
+              real</li>
+            <li><strong>Tailwind CSS</strong>: Diseño responsive y accesible</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>Retos y decisiones</h3>
+          <ul class="modal-list">
+            <li><strong>Integración con PayPal API</strong> — Primera integración con un procesador de pagos real.
+              Estudié la documentación del SDK, configuré webhooks para verificar el estado de los pagos y manejé los
+              distintos estados de las transacciones correctamente.</li>
+            <li><strong>Sistema de permisos granular</strong> — Los administradores necesitaban distintos niveles de
+              acceso según el área que gestionan. Implementé roles y políticas de autorización en Laravel para controlar
+              el acceso a cada sección del panel.</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>Resultado</h3>
+          <p>La plataforma digitalizó un proceso que antes era completamente manual, permitiendo que ASONOG gestione sus
+            programas de becas, pasantías y voluntariados desde una sola aplicación web accesible en línea.</p>
+        </section>
+      </div>
+
+      <div class="modal-footer">
+        <div class="modal-tech-tags">
+          <span>Laravel</span><span>PHP</span><span>MySQL</span><span>Tailwind CSS</span><span>PayPal API</span>
+        </div>
+        <a href="https://becas.asonog.hn" target="_blank" rel="noopener" class="modal-site-link">
+          Ir al sitio <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal 2: Cotizador de Pérgolas -->
+  <dialog class="project-modal" id="modal-cotizador" aria-labelledby="modal-cotizador-title">
+    <div class="modal-inner">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow modal-eyebrow">02 / 03 — Caso de estudio</span>
+          <h2 id="modal-cotizador-title" class="modal-title">Cotizador de Pérgolas</h2>
+        </div>
+        <button class="modal-close" type="button" aria-label="Cerrar modal">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M15 5L5 15M5 5l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-hero-img">
+        <img src="/build/img/mockup-projects/cotizador-pergolas.webp" alt="Captura del Cotizador de Pérgolas"
+          loading="lazy">
+      </div>
+
+      <div class="modal-meta">
+        <div class="meta-item">
+          <span class="meta-label">Rol</span>
+          <span class="meta-value">Full-Stack Developer</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Tipo</span>
+          <span class="meta-value">Aplicación web · Empresa</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Estado</span>
+          <span class="meta-value">En producción</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Cliente</span>
+          <span class="meta-value">Estudio 3A</span>
+        </div>
+      </div>
+
+      <div class="modal-body-content">
+        <section class="modal-section">
+          <h3>El problema</h3>
+          <p>El proceso de cotización de proyectos de pérgolas dependía de un archivo de Excel con fórmulas complejas
+            para calcular materiales, dimensiones y precios. Era difícil de mantener cuando cambiaban los precios,
+            propenso a errores al copiarlo entre dispositivos y no era fácilmente accesible para todo el equipo.</p>
+        </section>
+
+        <section class="modal-section">
+          <h3>La solución</h3>
+          <p>Trasladé toda la lógica de cálculo del Excel a una aplicación web. Con Laravel Livewire, los resultados se
+            actualizan en tiempo real mientras el usuario completa el formulario, sin necesidad de recargar la página.
+            La aplicación es accesible desde cualquier dispositivo con conexión a internet.</p>
+        </section>
+
+        <section class="modal-section">
+          <h3>Mi contribución</h3>
+          <ul class="modal-list">
+            <li>Análisis de las fórmulas del Excel original para traducirlas a lógica de aplicación</li>
+            <li>Desarrollo completo de la aplicación con Laravel y Livewire</li>
+            <li>Implementación de los cálculos en tiempo real con componentes Livewire</li>
+            <li>Diseño de la interfaz con Tailwind CSS</li>
+            <li>Configuración del servidor y deployment</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>Funcionalidades principales</h3>
+          <ul class="modal-list">
+            <li>Formulario de cotización con parámetros configurables</li>
+            <li>Cálculos automáticos en tiempo real con Livewire</li>
+            <li>Visualización detallada de materiales y costos</li>
+            <li>Interfaz responsive accesible desde cualquier dispositivo</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>Implementación técnica</h3>
+          <ul class="modal-list">
+            <li><strong>Laravel</strong>: Framework del backend y estructura de la aplicación</li>
+            <li><strong>Livewire</strong>: Para la reactividad en tiempo real sin escribir JavaScript separado</li>
+            <li><strong>MySQL</strong>: Persistencia de datos y configuraciones</li>
+            <li><strong>Tailwind CSS</strong>: Interfaz responsive y consistente</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>Retos y decisiones</h3>
+          <ul class="modal-list">
+            <li><strong>Traducir las fórmulas del Excel a lógica de aplicación</strong> — Algunas fórmulas tenían
+              dependencias complejas entre celdas que no eran evidentes a primera vista. Tuve que analizar el archivo
+              cuidadosamente, entender la lógica de negocio detrás de cada cálculo y replantear la estructura para que
+              funcionara correctamente en el contexto web.</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>Resultado</h3>
+          <p>El proceso de cotización, que antes requería abrir un archivo Excel específico y actualizarlo manualmente,
+            ahora se puede completar directamente desde el navegador con resultados automáticos e inmediatos, desde
+            cualquier dispositivo.</p>
+        </section>
+      </div>
+
+      <div class="modal-footer">
+        <div class="modal-tech-tags">
+          <span>Laravel</span><span>PHP</span><span>MySQL</span><span>Livewire</span><span>Tailwind CSS</span>
+        </div>
+        <a href="https://cotizador.estudio3a.ec" target="_blank" rel="noopener" class="modal-site-link">
+          Ir al sitio <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal 3: Portal de Agua y Saneamiento UMASGL -->
+  <dialog class="project-modal" id="modal-umasgl" aria-labelledby="modal-umasgl-title">
+    <div class="modal-inner">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow modal-eyebrow">03 / 03 — Caso de estudio</span>
+          <h2 id="modal-umasgl-title" class="modal-title">Plataforma de Consulta de Facturas</h2>
+        </div>
+        <button class="modal-close" type="button" aria-label="Cerrar modal">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M15 5L5 15M5 5l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-hero-img">
+        <img src="/build/img/mockup-projects/consultas-umasgl.webp"
+          alt="Captura de la Plataforma de Consulta de Facturas UMASGL" loading="lazy">
+      </div>
+
+      <div class="modal-meta">
+        <div class="meta-item">
+          <span class="meta-label">Rol</span>
+          <span class="meta-value">Full-Stack Developer</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Tipo</span>
+          <span class="meta-value">Plataforma web</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Estado</span>
+          <span class="meta-value">En producción</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Cliente</span>
+          <span class="meta-value">UMASGL</span>
+        </div>
+      </div>
+
+      <div class="modal-body-content">
+        <section class="modal-section">
+          <h3>El problema</h3>
+          <p>
+            UMASGL necesitaba una forma más accesible para que sus usuarios pudieran
+            consultar la información de sus facturas de agua. La información de
+            facturación se encontraba en archivos de Excel, por lo que era necesario
+            transformar esos datos en información estructurada y disponible para
+            consulta desde una plataforma web.
+          </p>
+        </section>
+
+        <section class="modal-section">
+          <h3>La solución</h3>
+          <p>
+            Desarrollé una plataforma web que permite a los usuarios consultar la
+            información de su factura de agua ingresando únicamente su clave de cliente.
+            El sistema cuenta además con un panel administrativo desde el cual se pueden
+            cargar los archivos de Excel utilizados por UMASGL.
+          </p>
+          <p>
+            Al cargar un archivo, la plataforma procesa y extrae automáticamente la
+            información, la estructura según el modelo de datos del sistema y la almacena
+            en la base de datos para que posteriormente pueda ser consultada por los
+            usuarios.
+          </p>
+        </section>
+
+        <section class="modal-section">
+          <h3>Mi contribución</h3>
+          <ul class="modal-list">
+            <li>Desarrollo completo de la plataforma con Laravel</li>
+            <li>Diseño e implementación de la estructura de la base de datos</li>
+            <li>Desarrollo del sistema de consulta mediante clave de cliente</li>
+            <li>Desarrollo del panel administrativo</li>
+            <li>Implementación del proceso de importación de archivos Excel</li>
+            <li>Procesamiento y transformación de los datos antes de almacenarlos</li>
+            <li>Integración del flujo completo entre carga, procesamiento y consulta de información</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>Funcionalidades principales</h3>
+          <ul class="modal-list">
+            <li>Consulta de información de facturación mediante clave de cliente</li>
+            <li>Panel de administración para gestionar la información</li>
+            <li>Carga de archivos Excel con datos de facturación</li>
+            <li>Extracción y procesamiento automático de datos</li>
+            <li>Almacenamiento de la información procesada en la base de datos</li>
+            <li>Disponibilidad de la información para consulta desde la plataforma web</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>Implementación técnica</h3>
+          <ul class="modal-list">
+            <li><strong>Laravel + PHP</strong>: Backend, lógica de negocio y estructura de la aplicación</li>
+            <li><strong>MySQL</strong>: Almacenamiento estructurado de la información de facturación</li>
+            <li><strong>Excel</strong>: Fuente de datos utilizada para actualizar la información del sistema</li>
+            <li><strong>Importación de datos</strong>: Procesamiento y transformación de la información proveniente de
+              los archivos Excel utilizando la libreria Laravel Excel.</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>Resultado</h3>
+          <p>
+            La plataforma convirtió un proceso basado en archivos de Excel en un sistema
+            web de consulta. Los administradores pueden actualizar la información mediante
+            la carga de nuevos archivos, mientras que los usuarios pueden acceder
+            directamente a los datos de su factura utilizando su clave de cliente.
+          </p>
+        </section>
+      </div>
+
+      <div class="modal-footer">
+        <div class="modal-tech-tags">
+          <span>Laravel</span><span>PHP</span><span>MySQL</span><span>Laravel Excel</span>
+        </div>
+        <a href="https://consultas.umasgl.com" target="_blank" rel="noopener" class="modal-site-link">
+          Ir al sitio <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </dialog>
+
+  <script type="module" src="/src/app.js"></script>
 </body>
 
 </html>
