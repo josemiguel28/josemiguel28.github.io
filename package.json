@@ -34,6 +34,7 @@
     "vite-plugin-purgecss": "^0.2.12"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "autoprefixer": "^10.4.19",
     "del": "^7.1.0",
     "glob": "^10.3.10",
