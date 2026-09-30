@@ -1,3 +1,7 @@
+// Initialize Vercel Analytics
+import { inject } from '@vercel/analytics';
+inject();
+
 document.addEventListener('DOMContentLoaded', () => {
   console.log('📄 DOM listo, inicializando listeners...');
 
